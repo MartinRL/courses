@@ -1,1 +1,5 @@
-﻿Hello, Bob! You have 3 messages in your inbox. The temperature is 34.4 celsius.
+﻿View English output:
+  c:\Exercise\ACME\data.txt
+
+Посмотреть русский вывод:
+  c:\Exercise\ACME\ru-RU\data.txt
