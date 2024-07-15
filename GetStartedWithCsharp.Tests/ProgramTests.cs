@@ -15,7 +15,7 @@ namespace GetStartedWithCsharp.Tests
             {
                 Console.SetOut(sw);
 
-                Program.Main(args: null);
+                Program.Main();
 
                 var output = sw.ToString().Trim();
 
