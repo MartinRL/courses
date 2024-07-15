@@ -8,7 +8,7 @@ namespace GetStartedWithCsharp.Tests
 {
     public class CalculateAndPrintGrades
     {
-        public void Execute()
+        public string Execute()
         {
             // initialize variables - graded assignments 
             int currentAssignments = 5;
@@ -46,6 +46,8 @@ namespace GetStartedWithCsharp.Tests
             Console.WriteLine("Nicolas: " + nicolasSum);
             Console.WriteLine("Zahirah: " + zahirahSum);
             Console.WriteLine("Jeong: " + jeongSum);
+
+            return string.Empty;
         }
     }
 
