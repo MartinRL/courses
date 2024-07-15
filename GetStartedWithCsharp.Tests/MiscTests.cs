@@ -1,5 +1,5 @@
 ﻿using System;
-using Xunit;
+using static System.Globalization.CultureInfo;
 using FluentAssertions;
 
 namespace GetStartedWithCsharp.Tests
@@ -8,7 +8,7 @@ namespace GetStartedWithCsharp.Tests
     {
         private const int fahrenheit = 94;
 
-        public string CelsiusMsg = $"The temperature is {((decimal)(fahrenheit - 32) * 5 / 9):N1} Celsius.";
+        public string CelsiusMsg = string.Create(CreateSpecificCulture("en-US"), $"The temperature is {((decimal)(fahrenheit - 32) * 5 / 9):N1} Celsius.");
     }
 
     public class Tests
