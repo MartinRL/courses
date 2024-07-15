@@ -48,7 +48,7 @@ namespace GetStartedWithCsharp.Tests
             decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
             decimal jeongScore = (decimal)jeongSum / currentAssignments;
 
-            return "Sophia: " + sophiaScore + "\nNicolas: " + nicolasScore + "\nZahirah: " + zahirahScore + "\nJeong: " + jeongScore;
+            return "Sophia: " + sophiaScore + " A\nNicolas: " + nicolasScore + " B\nZahirah: " + zahirahScore + " B\nJeong: " + jeongScore + " A";
         }
     }
 
