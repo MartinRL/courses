@@ -1,4 +1,4 @@
-﻿Sophia: 94
-Nicolas: 83
-Zahirah: 83
-Jeong: 95
+﻿Sophia: 94,6 A
+Nicolas: 83,6 B
+Zahirah: 83,4 B
+Jeong: 95,4 A
