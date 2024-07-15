@@ -50,11 +50,11 @@ namespace GetStartedWithCsharp.Tests
 
             StringWriter sw = new ();
 
-            sw.WriteLine("Student\tGrade\n");
-            sw.WriteLine("Sophia:\t" + sophiaScore + "\tA");
+            sw.WriteLine("Student\t\tGrade\n");
+            sw.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
             sw.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
             sw.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
-            sw.Write("Jeong:\t" + jeongScore + "\tA");
+            sw.Write("Jeong:\t\t" + jeongScore + "\tA");
 
             return sw.ToString();
         }
