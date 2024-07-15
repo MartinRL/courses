@@ -48,7 +48,15 @@ namespace GetStartedWithCsharp.Tests
             decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
             decimal jeongScore = (decimal)jeongSum / currentAssignments;
 
-            return "Sophia: " + sophiaScore + " A\nNicolas: " + nicolasScore + " B\nZahirah: " + zahirahScore + " B\nJeong: " + jeongScore + " A";
+            StringWriter sw = new ();
+
+            sw.WriteLine("Student\tGrade\n");
+            sw.WriteLine("Sophia:\t" + sophiaScore + "\tA");
+            sw.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
+            sw.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
+            sw.Write("Jeong:\t" + jeongScore + "\tA");
+
+            return sw.ToString();
         }
     }
 
