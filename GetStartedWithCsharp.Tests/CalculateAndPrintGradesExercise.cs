@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestPlatform.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,5 +54,10 @@ namespace GetStartedWithCsharp.Tests
 
     public class CalculateAndPrintGradesTests
     {
-    }
+        [Fact]
+        public async Task VerifyCalculateAndPrintGradesExecution()
+        {
+            await Verify(new CalculateAndPrintGrades().Execute());
+        }
+     }
 }
