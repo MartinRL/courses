@@ -11,17 +11,14 @@ namespace GetStartedWithCsharp.Tests
         [Fact]
         public async Task VerifyConsoleOutput()
         {
-            // Capture the console output
             using (var sw = new StringWriter())
             {
                 Console.SetOut(sw);
 
-                // Call the main method of the console application
                 Program.Main(args: null);
 
                 var output = sw.ToString().Trim();
 
-                // Verify the output using Verify.Xunit
                 await Verify(output);
             }
         }
