@@ -39,13 +39,15 @@ public static class GuidedProject
         totalGradePoints += course4Credit * course4Grade;
         totalGradePoints += course5Credit * course5Grade;
 
+        decimal gradePointAverage = (decimal)totalGradePoints / totalCreditHours;
+
         using StringWriter sw = new ();
-        sw.WriteLine($"{totalGradePoints} {totalCreditHours}");
         sw.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
         sw.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
         sw.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
         sw.WriteLine($"{course4Name} {course4Grade} {course4Credit}");
-        sw.Write($"{course5Name} {course5Grade} {course5Credit}");
+        sw.WriteLine($"{course5Name} {course5Grade} {course5Credit}");
+        sw.Write($"Final GPA: {gradePointAverage}");
 
         return sw.ToString();
     }
