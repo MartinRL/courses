@@ -11,7 +11,7 @@ namespace GetStartedWithCsharp.Tests
         public string CelsiusMsg = string.Create(CreateSpecificCulture("en-US"), $"The temperature is {((decimal)(fahrenheit - 32) * 5 / 9):N1} Celsius.");
     }
 
-    public class Tests
+    public class TempFormatterTests
     {
         [Fact]
         public void VerifyCelsiusMsg() => new TempFormatter().CelsiusMsg.Should().Be("The temperature is 34.4 Celsius.");
