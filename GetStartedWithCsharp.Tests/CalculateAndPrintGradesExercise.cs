@@ -1,15 +1,8 @@
-﻿using Microsoft.VisualStudio.TestPlatform.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GetStartedWithCsharp.Tests
+﻿namespace GetStartedWithCsharp
 {
-    public class CalculateAndPrintGrades
+    public static class CalculateAndPrintGrades
     {
-        public string Execute()
+        public static string Execute()
         {
             // initialize variables - graded assignments 
             int currentAssignments = 5;
@@ -38,6 +31,7 @@ namespace GetStartedWithCsharp.Tests
             int jeong4 = 100;
             int jeong5 = 97;
 
+            // calculate
             int sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
             int nicolasSum = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
             int zahirahSum = zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5;
@@ -48,8 +42,8 @@ namespace GetStartedWithCsharp.Tests
             decimal zahirahScore = (decimal)zahirahSum / currentAssignments;
             decimal jeongScore = (decimal)jeongSum / currentAssignments;
 
-            StringWriter sw = new ();
-
+            // print
+            using StringWriter sw = new();
             sw.WriteLine("Student\t\tGrade\n");
             sw.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
             sw.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
@@ -63,9 +57,6 @@ namespace GetStartedWithCsharp.Tests
     public class CalculateAndPrintGradesTests
     {
         [Fact]
-        public async Task VerifyCalculateAndPrintGradesExecution()
-        {
-            await Verify(new CalculateAndPrintGrades().Execute());
-        }
+        public void VerifyCalculateAndPrintGradesExecution() => Verify(CalculateAndPrintGrades.Execute());
      }
 }
