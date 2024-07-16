@@ -4,16 +4,16 @@ using FluentAssertions;
 
 namespace GetStartedWithCsharp.Tests
 {
-    public class TempFormatter
+    public class TempearureFormatter
     {
         private const int fahrenheit = 94;
 
         public string CelsiusMsg = string.Create(CreateSpecificCulture("en-US"), $"The temperature is {((decimal)(fahrenheit - 32) * 5 / 9):N1} Celsius.");
     }
 
-    public class TempFormatterTests
+    public class TempearureFormatterTests
     {
         [Fact]
-        public void VerifyCelsiusMsg() => new TempFormatter().CelsiusMsg.Should().Be("The temperature is 34.4 Celsius.");
+        public void VerifyCelsiusMsg() => new TempearureFormatter().CelsiusMsg.Should().Be("The temperature is 34.4 Celsius.");
     }
 }
