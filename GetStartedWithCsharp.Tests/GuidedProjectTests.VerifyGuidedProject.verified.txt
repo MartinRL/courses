@@ -1,0 +1,5 @@
+﻿English 101 4
+Algebra 101 3
+Biology 101 3
+Computer Science I 3
+Psychology 101 4
