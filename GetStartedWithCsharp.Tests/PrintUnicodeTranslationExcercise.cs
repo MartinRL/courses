@@ -23,6 +23,6 @@
     public class UnicodeTranslatorTests
     {
         [Fact]
-        public void VerifyConsoleOutput() => Verify(UnicodeTranslator.Execute());
+        public void VerifyUnicodeTranslator() => Verify(UnicodeTranslator.Execute()).ToTask().Wait();
     }
 }
