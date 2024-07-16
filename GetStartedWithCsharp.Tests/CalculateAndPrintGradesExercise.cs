@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GetStartedWithCsharp.Tests
+namespace GetStartedWithCsharp
 {
     public static class CalculateAndPrintGrades
     {

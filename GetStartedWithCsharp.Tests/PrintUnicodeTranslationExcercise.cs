@@ -5,7 +5,7 @@ using Xunit;
 using FluentAssertions;
 using System.Text;
 
-namespace GetStartedWithCsharp.Tests
+namespace GetStartedWithCsharp
 {
     public static class UnicodeTranslator
     {

@@ -2,7 +2,7 @@
 using static System.Globalization.CultureInfo;
 using FluentAssertions;
 
-namespace GetStartedWithCsharp.Tests
+namespace GetStartedWithCsharp
 {
     public class TempearureFormatter
     {
