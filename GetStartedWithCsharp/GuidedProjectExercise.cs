@@ -25,7 +25,22 @@ public static class GuidedProject
         int course4Grade = gradeB;
         int course5Grade = gradeA;
 
+        int totalCreditHours = 0;
+        totalCreditHours += course1Credit;
+        totalCreditHours += course2Credit;
+        totalCreditHours += course3Credit;
+        totalCreditHours += course4Credit;
+        totalCreditHours += course5Credit;
+
+        int totalGradePoints = 0;
+        totalGradePoints += course1Credit * course1Grade;
+        totalGradePoints += course2Credit * course2Grade;
+        totalGradePoints += course3Credit * course3Grade;
+        totalGradePoints += course4Credit * course4Grade;
+        totalGradePoints += course5Credit * course5Grade;
+
         using StringWriter sw = new ();
+        sw.WriteLine($"{totalGradePoints} {totalCreditHours}");
         sw.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
         sw.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
         sw.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
