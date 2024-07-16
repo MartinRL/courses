@@ -57,6 +57,6 @@
     public class CalculateAndPrintGradesTests
     {
         [Fact]
-        public void VerifyCalculateAndPrintGradesExecution() => Verify(CalculateAndPrintGrades.Execute());
+        public void VerifyCalculateAndPrintGradesExecution() => Verify(CalculateAndPrintGrades.Execute()).ToTask().Wait();
      }
 }
