@@ -1,11 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using Xunit;
-using FluentAssertions;
-using System.Text;
-
-namespace GetStartedWithCsharp
+﻿namespace GetStartedWithCsharp
 {
     public static class UnicodeTranslator
     {
