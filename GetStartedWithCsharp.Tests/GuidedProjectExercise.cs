@@ -27,11 +27,11 @@
             int course5Grade = gradeA;
 
             using StringWriter sw = new ();
-            sw.WriteLine($"{course1Name} {course1Grade}");
-            sw.WriteLine($"{course2Name} {course2Grade}");
-            sw.WriteLine($"{course3Name} {course3Grade}");
-            sw.WriteLine($"{course4Name} {course4Grade}");
-            sw.Write($"{course5Name} {course5Grade}");
+            sw.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
+            sw.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
+            sw.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
+            sw.WriteLine($"{course4Name} {course4Grade} {course4Credit}");
+            sw.Write($"{course5Name} {course5Grade} {course5Credit}");
 
             return sw.ToString();
         }
