@@ -44,13 +44,15 @@ public static class GuidedProject
         int firstDigit = (int)(gradePointAverage * 10) % 10;
         int secondDigit = (int)(gradePointAverage * 100) % 10;
 
-        using StringWriter sw = new ();
-        sw.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
-        sw.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
-        sw.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
-        sw.WriteLine($"{course4Name} {course4Grade} {course4Credit}");
-        sw.WriteLine($"{course5Name} {course5Grade} {course5Credit}");
-        sw.Write($"Final GPA: {leadingDigit}.{firstDigit}{secondDigit}");
+        StringWriter sw = new ();
+        sw.WriteLine($"Student: {studentName}\n");
+        sw.WriteLine("Course\t\t\t\tGrade\tCredit Hours");
+        sw.WriteLine($"{course1Name}\t\t\t{course1Grade}\t\t{course1Credit}");
+        sw.WriteLine($"{course2Name}\t\t\t{course2Grade}\t\t{course2Credit}");
+        sw.WriteLine($"{course3Name}\t\t\t{course3Grade}\t\t{course3Credit}");
+        sw.WriteLine($"{course4Name}\t{course4Grade}\t\t{course4Credit}");
+        sw.WriteLine($"{course5Name}\t\t{course5Grade}\t\t{course5Credit}");
+        sw.Write($"\nFinal GPA:\t\t\t {leadingDigit}.{firstDigit}{secondDigit}");
 
         return sw.ToString();
     }
