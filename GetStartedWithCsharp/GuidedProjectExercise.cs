@@ -40,6 +40,9 @@ public static class GuidedProject
         totalGradePoints += course5Credit * course5Grade;
 
         decimal gradePointAverage = (decimal)totalGradePoints / totalCreditHours;
+        int leadingDigit = (int)gradePointAverage;
+        int firstDigit = (int)(gradePointAverage * 10) % 10;
+        int secondDigit = (int)(gradePointAverage * 100) % 10;
 
         using StringWriter sw = new ();
         sw.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
@@ -47,7 +50,7 @@ public static class GuidedProject
         sw.WriteLine($"{course3Name} {course3Grade} {course3Credit}");
         sw.WriteLine($"{course4Name} {course4Grade} {course4Credit}");
         sw.WriteLine($"{course5Name} {course5Grade} {course5Credit}");
-        sw.Write($"Final GPA: {gradePointAverage}");
+        sw.Write($"Final GPA: {leadingDigit}.{firstDigit}{secondDigit}");
 
         return sw.ToString();
     }
