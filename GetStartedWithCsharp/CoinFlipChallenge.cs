@@ -1,12 +1,11 @@
 ﻿
+using System;
+
 namespace GetStartedWithCsharp;
 
 public static class CoinFlipper
 {
-    internal static string Flip()
-    {
-        throw new NotImplementedException();
-    }
+    internal static string Flip() => new Random().Next(2) == 0 ? "heads" : "tails";
 }
 
 public class CoinFlipTest
