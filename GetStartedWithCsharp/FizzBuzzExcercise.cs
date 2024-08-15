@@ -4,9 +4,22 @@ namespace GetStartedWithCsharp;
 
 public class FizzBuzz
 {
-    internal static IEnumerable<string> Generate(int count) =>
-        Enumerable.Range(1, count)
-        .Select(n => n.ToString());
+    internal static IEnumerable<string> Generate(int count)
+    {
+        static string fizzBuzzText(int n)
+        {
+            if ((n % 3) == 0 && (n % 5) == 0)
+                return $"{n} - FizzBuzz";
+            else if ((n % 3) == 0)
+                return $"{n} - Fizz";
+            else if ((n % 5) == 0)
+                return $"{n} - Buzz";
+            else 
+                return n.ToString();
+        };
+
+        return Enumerable.Range(1, count).Select(fizzBuzzText);
+    }
 }
 
 public class FizzBuzzTests
