@@ -4,7 +4,9 @@ namespace GetStartedWithCsharp;
 
 public class FizzBuzz
 {
-    internal static IEnumerable<string> Generate(int count) => throw new NotImplementedException();
+    internal static IEnumerable<string> Generate(int count) =>
+        Enumerable.Range(1, count)
+        .Select(n => n.ToString());
 }
 
 public class FizzBuzzTests
